@@ -3,15 +3,16 @@ package com.criclewaveview_master;
 import android.app.Activity;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+/**
+ * 测试类
+ */
 public class MainActivity extends Activity {
 
-    CustomWaveView waveView;
-
-    int currentProgress = 0;
-    int maxProgress = 100;
+    private CustomWaveView waveView;
+    private int currentProgress = 0;
+    private int maxProgress = 100;
     Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
