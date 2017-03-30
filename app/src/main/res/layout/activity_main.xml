@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wave="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.criclewaveview_master.MainActivity">
+
+    <com.criclewaveview_master.CustomWaveView
+        android:id="@+id/custom_circle_wave_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        wave:circle_color = "@color/circle_color"
+        android:layout_centerInParent="true"
+        wave:circle_background_color = "@color/circle_bg_color"
+        wave:progress_wave_color = "@color/colorAccent"
+        wave:progress_text_size = "20sp"
+        wave:progress_text_color = "@color/circle_color"/>
+
+</RelativeLayout>
