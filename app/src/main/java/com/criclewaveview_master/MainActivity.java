@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         waveView = (CustomWaveView)findViewById(R.id.custom_circle_wave_view);
         //设置圆的半径
-       waveView.setRadius(300);
+       waveView.setRadius(100);
         //设置进度最大值
         waveView.setMaxProgress(maxProgress);
         //设置进度的当前值
@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
             public void run() {
                 while (currentProgress < maxProgress){
                     try {
-                        Thread.sleep(3000);
+                        Thread.sleep(100);
                         handler.sendEmptyMessage(0);
                     } catch (InterruptedException e) {
                         e.printStackTrace();

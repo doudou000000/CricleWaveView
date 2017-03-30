@@ -170,9 +170,7 @@ public class CustomWaveView extends View {
         canvas.drawBitmap(mBitmap, 0, 0, null);
         //绘制圆
         canvas.drawCircle(width/2, height/2, radius, mCirclePaint);
-        //绘制进度
-        String text = currentProgress + "%";
-        canvas.drawText(text, (width/2 - textSize/2), (height/2 + textSize/2), mTextPaint);
+
         if(currentProgress <= 0){
             waveRipple = 0;
         }else if(currentProgress >0 && currentProgress < maxProgress){
@@ -183,6 +181,9 @@ public class CustomWaveView extends View {
             currentProgress = maxProgress;
             animator.cancel();
         }
+        //绘制进度
+        String text = currentProgress + "%";
+        canvas.drawText(text, (width/2 - textSize), (height/2 + textSize/2), mTextPaint);
     }
 
     /**
